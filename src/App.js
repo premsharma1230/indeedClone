@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Header from './components/header'; 
+import Search from './components/search';
+import SignIn from './pages/sign-in';
 
 function App() {
+  const  [modal, setModal] = useState(false);
+  const handleOpenModal = () => {
+    setModal(true)
+  }
+  const handleCloseModal = () => {
+    setModal(false)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Header handleOpenModal={handleOpenModal}/>
+       <Search/>
+      {modal && <SignIn closeModal = {handleCloseModal}/> }
     </div>
   );
 }
