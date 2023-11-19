@@ -7,6 +7,9 @@ const RecentSearch = () => {
                 <h2 className="title">
                     recent
                 </h2>
+                <div className="recent-content">
+                    <p> this feature comming soon</p>
+                </div>
             </div>
         </div>
     )

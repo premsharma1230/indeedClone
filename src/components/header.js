@@ -12,7 +12,7 @@ const Header = ({ handleOpenModal }) => {
                     <ul>
                         <li>Home</li>
                         <li><a href='#CompanyReview'>Company review</a></li>
-                        <li><a href='#SalaryGuid'>Salary guide</a></li>
+                        <li><a href='#SalaryGuide'>Salary guide</a></li>
                     </ul>
                 </div>
                 <div className="right-content">

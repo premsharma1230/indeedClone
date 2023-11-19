@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import RecentSearch from '../components/recentSearch'
-import JobFeeds from '../components/jobFeeds'
+import JobFeeds from '../components/jobFeeds/jobFeeds'
 
 const Jobs = () => {
     const [tab, setTab] = useState(true);

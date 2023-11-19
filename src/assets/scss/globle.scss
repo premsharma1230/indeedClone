@@ -8,6 +8,7 @@
 @import "../scss/header.scss";
 @import "../scss/sign-in.scss";
 @import "../scss/jobs.scss";
+@import "../scss/company_review.scss";
 
 
 html {
@@ -25,9 +26,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 100px;
     gap: 1rem;
+
     .search-wrap {
         position: relative;
         width: 100%;
+
         .title-wrap {
             color: #000;
             position: absolute;
@@ -37,14 +40,16 @@ html {
             font-size: 1em;
             text-transform: capitalize;
         }
+
         .icon-wrap {
             color: #000;
             position: absolute;
             top: 15px;
             right: 10px;
-            font-size: 1em; 
+            font-size: 1em;
         }
-        input{
+
+        input {
             padding: 1rem 3.8em;
             width: 100%;
             border-radius: .5rem;
@@ -54,22 +59,116 @@ html {
             border: 1.4px solid #333;
         }
     }
-    button.find-button{
+
+    button.find-button {
         font-size: 1.1em;
         text-transform: capitalize;
         cursor: pointer;
         transition: all .3s ease-in-out;
-        color: #fff; 
-        font-weight: normal; 
+        color: #fff;
+        font-weight: normal;
         background: #2557a7;
         padding: .5rem;
         border: none;
-        outline:none;
+        outline: none;
         border-radius: .5rem;
-      &:hover{
-        opacity: .77;
-        transition: all .3s ease-in-out;
+
+        &:hover {
+            opacity: .77;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
+
+//company-review 
+
+.CompanyReview,
+.SalaryGuide {
+    width: 70%;
+    margin: 1rem auto .3rem;
+}
+
+//.SalaryGuide 
+
+.SalaryGuide {
+    .salary-guid-cards {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .7rem 1rem; 
         cursor: pointer;
-      }
+        h2 {
+            font-size: 1em;
+            text-transform: capitalize;
+            color: #000;
+        }
+
+        .cards-content {
+            border: 1.3px solid #e4e2e0;
+            border-radius: .4rem;
+            padding: .8rem;
+            transition: all .3s ease-in-out;
+            margin-bottom: .5rem;
+
+            &:hover {
+                border-color: #2557a7;
+                box-shadow: 0 0px 5px 1px rgba(228, 226, 224, 0.733);
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .salary-price {
+            padding: .5rem 0;
+            font-size: 1em;
+            text-transform: capitalize;
+            color: #2557a7;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    fill: #000;
+                    color: #000;
+                }
+            }
+        }
+
+        .job-openings {
+            color: #424242;
+            font-size: 1em;
+            text-decoration: underline;
+            margin-top: .4rem;
+        }
+    }
+}
+
+// recent-search--->>>
+
+.recent-search{
+    .title{
+        font-size: 1em;
+        text-transform: capitalize;
+        margin-top: 1rem;
+    }
+    .recent-content{
+        margin: 1rem 0;
+        width: 100%;
+        border: 1.3px solid #e4e2e0;
+        border-radius: .4rem;
+        padding: 1.8rem;
+        background: #fff;
+        box-shadow: 0 0px 5px 1px rgba(228, 226, 224, 0.733);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            font-size: 1em;
+            text-transform: capitalize;
+            color: #000;
+        }
     }
 }

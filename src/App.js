@@ -3,7 +3,7 @@ import Header from './components/header';
 import Search from './components/search';
 import SignIn from './pages/sign-in';
 import Jobs from './pages/jobs';
-import SalaryGuid from './pages/salary-guid';
+import SalaryGuide from './pages/salary-guide';
 import CompanyReview from './pages/comany-review';
 
 function App() {
@@ -22,8 +22,7 @@ function App() {
       {modal && <SignIn closeModal={handleCloseModal} />}
       <Jobs /> 
       <CompanyReview/>
-      <SalaryGuid/>
-     
+      <SalaryGuide/> 
     </div>
   );
 }
